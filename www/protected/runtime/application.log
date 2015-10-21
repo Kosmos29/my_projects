@@ -1,0 +1,1030 @@
+2015/10/20 17:51:19 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'site.menu' doesn't exist. Выполнявшийся SQL-запрос: SHOW FULL COLUMNS FROM `menu`.
+in Z:\home\best\www\index.php (13)
+2015/10/20 17:54:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'site.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2015/10/20 17:54:18 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'String NOT NULL,
+	`content` text,
+	`id_menu` int(11) NOT NULL
+)' at line 3. The SQL statement executed was: CREATE TABLE `pages` (
+	`id_page` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`title` String NOT NULL,
+	`content` text,
+	`id_menu` int(11) NOT NULL
+).
+2015/10/20 17:54:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'String NOT NULL,
+	`content` text,
+	`id_menu` int(11) NOT NULL
+)' at line 3. The SQL statement executed was: CREATE TABLE `pages` (
+	`id_page` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`title` String NOT NULL,
+	`content` text,
+	`id_menu` int(11) NOT NULL
+)' in C:\WebServers\home\best\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 C:\WebServers\home\best\www\framework\db\CDbMigration.php(228): CDbCommand->createTable('pages', Array, NULL)
+#2 C:\WebServers\home\best\www\protected\migrations\m151020_113340_create_pages.php(12): CDbMigration->createTable('pages', Array)
+#3 C:\WebServers\home\best\www\framework\cli\commands\MigrateCommand.php(385): m151020_113340_create_pages->up()
+#4 C:\WebServers\home\best\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m151020_113340_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\WebServers\home\best\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\WebServers\home\best\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 C:\WebServers\home\best\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 C:\WebServers\home\best\www\framework\yiic.php(33): CApplication->run()
+#11 C:\WebServers\home\best\www\protected\yiic.php(7): require_once('C:\WebServers\h...')
+#12 {main}
+---
+2015/10/20 18:38:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'site.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2015/10/20 18:40:11 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`site`.`pages`, CONSTRAINT `id_menu` FOREIGN KEY (`id_menu`) REFERENCES `menu` (`id_menu`)). Выполнявшийся SQL-запрос: INSERT INTO `pages` (`title`, `content`, `id_menu`) VALUES (:yp0, :yp1, :yp2).
+in Z:\home\best\www\protected\controllers\PagesController.php (73)
+in Z:\home\best\www\index.php (13)
+2015/10/20 18:40:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`site`.`pages`, CONSTRAINT `id_menu` FOREIGN KEY (`id_menu`) REFERENCES `menu` (`id_menu`)). The SQL statement executed was: INSERT INTO `pages` (`title`, `content`, `id_menu`) VALUES (:yp0, :yp1, :yp2)' in C:\WebServers\home\best\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\WebServers\home\best\www\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 Z:\home\best\www\protected\controllers\PagesController.php(73): CActiveRecord->save()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): PagesController->actionCreate()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\WebServers\home\best\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\WebServers\home\best\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\WebServers\home\best\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\WebServers\home\best\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\WebServers\home\best\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\WebServers\home\best\www\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/create')
+#14 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 Z:\home\best\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/pages/create
+HTTP_REFERER=http://best/index.php/pages/create
+---
+2015/10/20 21:18:19 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`site`.`pages`, CONSTRAINT `id_menu` FOREIGN KEY (`id_menu`) REFERENCES `menu` (`id_menu`)). Выполнявшийся SQL-запрос: DELETE FROM `menu` WHERE `menu`.`id_menu`=1.
+in Z:\home\best\www\protected\controllers\MenuController.php (113)
+in Z:\home\best\www\index.php (13)
+2015/10/20 21:18:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`site`.`pages`, CONSTRAINT `id_menu` FOREIGN KEY (`id_menu`) REFERENCES `menu` (`id_menu`)). The SQL statement executed was: DELETE FROM `menu` WHERE `menu`.`id_menu`=1' in C:\WebServers\home\best\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\db\ar\CActiveRecord.php(1745): CDbCommand->execute()
+#1 C:\WebServers\home\best\www\framework\db\ar\CActiveRecord.php(1168): CActiveRecord->deleteByPk('1')
+#2 Z:\home\best\www\protected\controllers\MenuController.php(113): CActiveRecord->delete()
+#3 [internal function]: MenuController->actionDelete('1')
+#4 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(MenuController), Array)
+#5 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(MenuController), Object(ReflectionMethod), Array)
+#6 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\WebServers\home\best\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\WebServers\home\best\www\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\WebServers\home\best\www\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\WebServers\home\best\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\WebServers\home\best\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\WebServers\home\best\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\WebServers\home\best\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\WebServers\home\best\www\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('menu/delete')
+#19 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#20 Z:\home\best\www\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/index.php/menu/delete/1?ajax=menu-grid
+HTTP_REFERER=http://best/index.php/menu/admin
+---
+2015/10/20 22:14:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "menu1".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('menu1')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('menu1')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('menu/menu1')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/menu/menu1
+---
+2015/10/20 22:14:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "index".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head
+---
+2015/10/20 22:15:06 [error] [exception.CDbException] exception 'CDbException' with message 'Таблица "menu" не содержит столбца "name_menu".' in C:\WebServers\home\best\www\framework\db\schema\CDbCommandBuilder.php:591
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 Z:\home\best\www\protected\controllers\HeadController.php(7): CActiveRecord->findByAttributes(Array)
+#2 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionMenu()
+#3 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('menu')
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/menu')
+#8 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 Z:\home\best\www\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/head/menu
+---
+2015/10/20 22:15:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "menu1".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('menu1')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('menu1')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/menu1')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head/menu1
+---
+2015/10/20 22:15:33 [error] [exception.CDbException] exception 'CDbException' with message 'Таблица "menu" не содержит столбца "name_menu".' in C:\WebServers\home\best\www\framework\db\schema\CDbCommandBuilder.php:591
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 Z:\home\best\www\protected\controllers\HeadController.php(7): CActiveRecord->findByAttributes(Array)
+#2 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionMenu()
+#3 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('menu')
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/menu')
+#8 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 Z:\home\best\www\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/head/menu
+---
+2015/10/20 22:27:05 [error] [exception.CDbException] exception 'CDbException' with message 'Таблица "menu" не содержит столбца "name".' in C:\WebServers\home\best\www\framework\db\schema\CDbCommandBuilder.php:591
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 Z:\home\best\www\protected\controllers\HeadController.php(7): CActiveRecord->findByAttributes(Array)
+#2 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionMenu()
+#3 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('menu')
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/menu')
+#8 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 Z:\home\best\www\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/head/menu
+---
+2015/10/20 22:58:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "index".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head
+---
+2015/10/20 22:58:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "index".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head
+---
+2015/10/21 07:04:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "show".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('show')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('menu/show')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/menu/show
+---
+2015/10/21 07:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "show".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('show')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('menu/show')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/menu/menu1
+---
+2015/10/21 07:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "index".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head
+---
+2015/10/21 07:11:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/show
+---
+2015/10/21 07:27:20 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/show
+---
+2015/10/21 07:32:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "index".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head
+---
+2015/10/21 07:32:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show
+---
+2015/10/21 07:53:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show
+---
+2015/10/21 07:53:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/ert
+---
+2015/10/21 07:54:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/
+---
+2015/10/21 07:54:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/ert
+---
+2015/10/21 07:56:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/ert
+---
+2015/10/21 07:58:34 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/ert
+---
+2015/10/21 07:58:40 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 07:59:17 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 07:59:18 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 07:59:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 07:59:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 07:59:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 07:59:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 07:59:20 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 07:59:20 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 07:59:20 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 07:59:20 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 08:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show/view".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show/view')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 08:01:09 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 08:02:04 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 08:18:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 08:18:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 08:18:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 08:18:37 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 08:18:37 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 08:18:38 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ShowAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/1
+---
+2015/10/21 08:48:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show&title=jhjbj".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show&title=jhjb...')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show&title=jhjbj
+---
+2015/10/21 08:50:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show&title=5".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show&title=5')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show&title=5
+---
+2015/10/21 08:55:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show
+---
+2015/10/21 08:55:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show/khg".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show/khg')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/khg
+---
+2015/10/21 08:56:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show&name=kjh".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show&name=kjh')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show&name=kjh
+---
+2015/10/21 08:56:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show?name=kjh
+---
+2015/10/21 09:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show
+---
+2015/10/21 09:14:09 [error] [exception.CException] exception 'CException' with message 'В классе ShowAction и его поведениях не найден метод или замыкание с именем "render".' in C:\WebServers\home\best\www\framework\base\CComponent.php:265
+Stack trace:
+#0 Z:\home\best\www\protected\controllers\menu\ShowAction.php(7): CComponent->__call('render', Array)
+#1 Z:\home\best\www\protected\controllers\menu\ShowAction.php(7): ShowAction->render('view')
+#2 C:\WebServers\home\best\www\framework\web\actions\CAction.php(76): ShowAction->run()
+#3 C:\WebServers\home\best\www\framework\web\CController.php(308): CAction->runWithParams(Array)
+#4 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(ShowAction))
+#5 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ShowAction), Array)
+#6 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#8 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 Z:\home\best\www\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/show/ert
+---
+2015/10/21 10:27:00 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Menu.id".' in C:\WebServers\home\best\www\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\db\ar\CActiveRecord.php(143): CComponent->__get('id')
+#1 Z:\home\best\www\protected\controllers\HeadController.php(9): CActiveRecord->__get('id')
+#2 [internal function]: HeadController->actionShow('menu1')
+#3 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(HeadController), Array)
+#4 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(HeadController), Object(ReflectionMethod), Array)
+#5 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#9 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#10 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\best\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/show/menu1
+---
+2015/10/21 10:56:23 [error] [php] Missing argument 2 for CHtml::activeLabel(), called in Z:\home\best\www\protected\views\head\view.php on line 4 and defined (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:1197)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#2 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#3 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#4 unknown(0): HeadController->actionShow()
+#5 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#9 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#10 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#11 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 10:57:48 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 Z:\home\best\www\protected\views\head\view.php(4): activeLabel()
+#1 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#3 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#5 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#6 unknown(0): HeadController->actionShow()
+#7 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#8 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#12 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:02:36 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:02:38 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:02:40 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:10 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:11 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:12 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:12 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:13 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:13 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:14 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:14 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:14 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:15 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:15 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/21 11:03:15 [error] [php] get_class() expects parameter 1 to be object, string given (C:\WebServers\home\best\www\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\helpers\CHtml.php(1255): resolveNameID()
+#1 Z:\home\best\www\protected\views\head\view.php(4): activeTextField()
+#2 C:\WebServers\home\best\www\framework\web\CBaseController.php(126): require()
+#3 C:\WebServers\home\best\www\framework\web\CBaseController.php(95): HeadController->renderInternal()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#6 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#7 unknown(0): HeadController->actionShow()
+#8 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#12 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#13 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#14 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show/menu1
+in Z:\home\best\www\protected\views\head\view.php (4)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
