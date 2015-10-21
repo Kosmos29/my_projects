@@ -3,6 +3,7 @@
     {
         public function actionShow($name)
         {
+            $name = mysql_escape_string($name);
             $menu = Menu::model()->findByAttributes(array('title'=>$name));
             if ($menu = Menu::model()->findByAttributes(array('title'=>$name))){
                 $id_menu =  $menu->id_menu;
