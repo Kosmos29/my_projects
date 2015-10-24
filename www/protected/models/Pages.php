@@ -95,4 +95,24 @@ class Pages extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        public function showContentPage($name)
+        {
+            $name = mysql_escape_string($name);
+            if($menu = Menu::model()->findByAttributes(array('title'=>$name)))
+            {
+                if ($pages = Pages::model()->findAllByAttributes(array('id_menu'=>$menu->id_menu)))
+                {
+                    return $pages;
+                }
+                else
+                {
+                    print 'Страница не найдена';
+                }
+            }
+            else
+            {
+                print 'Несуществующий пункт меню';
+            }
+            
+        }
 }

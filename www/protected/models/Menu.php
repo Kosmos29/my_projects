@@ -83,4 +83,18 @@ class Menu extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        public function getMenuList()
+        {
+            $items = array();
+            $menu = $this->findAll();
+            foreach($menu as $article)
+            {
+                $items[] = array(
+                    'label'=>$article->title,
+                    'url' => Yii::app()->createUrl('head/showContent/',array('name'=>$article->title)),
+                );
+            }
+            return $items;
+        }
+        
 }

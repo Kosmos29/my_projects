@@ -1,19 +1,20 @@
 <?php
     class HeadController extends CController
     {
-        public function actionShow($name)
+        public function actionShowAll()
         {
-            $menu = Menu::model()->findByAttributes(array('title'=>$name));
-            if ($menu = Menu::model()->findByAttributes(array('title'=>$name))){
-                $id_menu =  $menu->id_menu;
-                if ($page = Pages::model()->findAllByAttributes(array('id_menu'=>$id_menu)))
-                {
-                    $this->render('view',array('page'=>$page));
-                }
+            if ($menu = Menu::model()->getMenuList())
+            {
+                $this->render('view',array('menu'=>$menu));
             }
-            else{
-                echo 'Не существующий пункт меню';
-            }
+        }
+        public function actionShowContent($name)
+        {
+             if ($pages = Pages::model()->showContentPage($name))
+             {
+                 $this->render('view_content',array('pages'=>$pages));
+             }
+            
         }
     }
 /* 

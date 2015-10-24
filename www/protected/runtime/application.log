@@ -1028,3 +1028,882 @@ REQUEST_URI=/index.php/show/menu1
 in Z:\home\best\www\protected\views\head\view.php (4)
 in Z:\home\best\www\protected\controllers\HeadController.php (11)
 in Z:\home\best\www\index.php (13)
+2015/10/23 15:47:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/show
+HTTP_REFERER=http://best/index.php/show/menu1
+---
+2015/10/23 15:49:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "view".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/view')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head/0
+HTTP_REFERER=http://best/index.php/show/menu1
+---
+2015/10/23 15:51:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show/menu1')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/show/menu1
+HTTP_REFERER=http://best/index.php/show/menu1
+---
+2015/10/23 15:51:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show/menu1')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/show/menu1
+---
+2015/10/23 15:51:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show/menu1')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/show/menu1
+---
+2015/10/23 15:52:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show/menu1')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/show/menu1
+---
+2015/10/23 15:52:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/show
+HTTP_REFERER=http://best/index.php/show/menu1
+---
+2015/10/23 15:56:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/
+---
+2015/10/23 15:57:00 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/show/menu1')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/show/menu1
+HTTP_REFERER=http://best/index.php/show/menu1
+---
+2015/10/23 15:58:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "view".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/view')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head/0
+HTTP_REFERER=http://best/index.php/show/menu1
+---
+2015/10/23 15:58:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "view".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/view')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head/0
+HTTP_REFERER=http://best/index.php/show/menu1
+---
+2015/10/23 23:53:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/
+---
+2015/10/24 00:05:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/
+---
+2015/10/24 00:06:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show
+---
+2015/10/24 00:14:11 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(10): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (10)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:15:19 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:17:16 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:17:18 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:17:19 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:19:03 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:19:04 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:19:04 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:19:05 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:19:05 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:19:06 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:19:06 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:19:06 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:19:06 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:19:07 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:22:27 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:22:29 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:23:22 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:23:25 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:23:26 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:23:26 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:23:27 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:23:27 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:23:27 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:23:28 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:23:28 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:23:28 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:23:28 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:24:08 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(11): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (11)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:27:11 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(15): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (15)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:28:27 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view.php:3)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(15): HeadController->render()
+#3 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(49): HeadController->actionShowAll()
+#4 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#7 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#8 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/show
+in Z:\home\best\www\protected\views\head\view.php (3)
+in Z:\home\best\www\protected\controllers\HeadController.php (15)
+in Z:\home\best\www\index.php (13)
+2015/10/24 00:30:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "view".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/view')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head/0
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:02:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "view".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/view')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head/0
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:03:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show/news".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show/news')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/news
+---
+2015/10/24 01:24:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "0".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('0')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/0
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:24:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "0".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('0')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/0
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:28:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "showContent".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('showContent')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('showContent')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/showConten...')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head/showContent/title/name/menu1
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:38:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "showContent".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('showContent')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('showContent')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/showConten...')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head/showContent?name=menu1
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:39:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show/<name:/ w".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show/<name:/ w')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/%3Cname:/+w?name=menu1
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:41:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show/name/menu1".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show/name/menu1')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/name/menu1
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:42:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show/name/menu1".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show/name/menu1')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/name/menu1
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "show/name/menu1".' in C:\WebServers\home\best\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('show/name/menu1')
+#1 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\best\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/show/name/menu1
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:44:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "showContent".' in C:\WebServers\home\best\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(270): CController->missingAction('showContent')
+#1 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('showContent')
+#2 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/showConten...')
+#3 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\best\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/head/showContent?name=menu1
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:53:20 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('showContent')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/showConten...')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/showContent?name=menu1
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:53:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('showContent')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/showConten...')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/showContent?name=menu2
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 01:53:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('showContent')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/showConten...')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/head/showContent?name=menu1
+HTTP_REFERER=http://best/index.php/show
+---
+2015/10/24 02:01:53 [error] [php] Invalid argument supplied for foreach() (Z:\home\best\www\protected\views\head\view_content.php:2)
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(869): HeadController->renderFile()
+#1 C:\WebServers\home\best\www\framework\web\CController.php(782): HeadController->renderPartial()
+#2 Z:\home\best\www\protected\controllers\HeadController.php(18): HeadController->render()
+#3 unknown(0): HeadController->actionShowContent()
+#4 C:\WebServers\home\best\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\WebServers\home\best\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\WebServers\home\best\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\WebServers\home\best\www\framework\web\CController.php(286): HeadController->runAction()
+#8 C:\WebServers\home\best\www\framework\web\CController.php(265): HeadController->runActionWithFilters()
+#9 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): HeadController->run()
+#10 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 Z:\home\best\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/head/showContent?name=menu1
+in Z:\home\best\www\protected\views\head\view_content.php (2)
+in Z:\home\best\www\protected\controllers\HeadController.php (18)
+in Z:\home\best\www\index.php (13)
+2015/10/24 02:09:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('showContent')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/showConten...')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/menu1
+---
+2015/10/24 02:09:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\WebServers\home\best\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebServers\home\best\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebServers\home\best\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebServers\home\best\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebServers\home\best\www\framework\web\CWebApplication.php(282): CController->run('showContent')
+#4 C:\WebServers\home\best\www\framework\web\CWebApplication.php(141): CWebApplication->runController('head/showConten...')
+#5 C:\WebServers\home\best\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\best\www\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php/show/menu1
+---
